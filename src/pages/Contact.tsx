@@ -5,7 +5,7 @@ function Contact() {
   const [sent, setSent] = useState(false)
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
 
-  const handleSubmit = (e: React.FormEvent) => {
+ const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault()
     setSent(true)
   }
